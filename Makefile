@@ -1,6 +1,7 @@
 NAME = stippen
 FLAGS = -Wall -Wextra -Werror
 INCLUDES = -I includes/
+SDL_LIB = -L ~/.brew/lib -l SDL2
 
 SRC_DIR = src/
 BIN_DIR = bin/
@@ -8,6 +9,8 @@ BIN_DIR = bin/
 # List of all the source files.
 SRC_NAMES = \
 	main \
+	pixels \
+	SDL_initialize \
 
 # List of all the source files, folders are to be added by
 # including a $(addprefix, DIR_NAME, $(DIR_FILES))
@@ -22,7 +25,7 @@ OBJS = $(addprefix $(BIN_DIR), $(SRCS:.c=.o))
 all: $(NAME)
 
 $(NAME): $(BIN_DIR) $(OBJS)
-	gcc $(FLAGS) $(INCLUDES) -o $(NAME) $(OBJS)
+	gcc $(FLAGS) $(INCLUDES) -o $(NAME) $(OBJS) $(SDL_LIB)
 
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)

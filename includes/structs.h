@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 22:05:38 by home              #+#    #+#             */
-/*   Updated: 2020/06/13 22:45:38 by home             ###   ########.fr       */
+/*   Updated: 2020/06/13 22:47:33 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ typedef struct	s_display
 typedef struct	s_app_state
 {
 	bool		active;
-}				t_app_state
+}				t_app_state;
 
 #endif
