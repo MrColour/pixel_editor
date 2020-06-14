@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 21:44:13 by home              #+#    #+#             */
-/*   Updated: 2020/06/13 22:07:19 by home             ###   ########.fr       */
+/*   Updated: 2020/06/13 22:55:48 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
 
 void	SDLU_start(t_display *dest);
 void	SDLU_close(t_display *display);
+
+void	process_user_input(t_app_state *app_state);
 
 #endif
