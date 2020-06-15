@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 21:30:01 by home              #+#    #+#             */
-/*   Updated: 2020/06/14 19:20:01 by home             ###   ########.fr       */
+/*   Updated: 2020/06/14 22:14:53 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	app_state_initialize(t_app_state *app_state)
 	app_state->grid_color = 0xAAAAAA;
 
 	app_state->pixmap = malloc(sizeof(app_state->pixmap) * (app_state->size * app_state->size));
+	bzero(app_state->pixmap, sizeof(app_state->pixmap) * (app_state->size * app_state->size));
 	app_state->pixel_color = 0xFFFFFF;
 }
 
@@ -37,7 +38,9 @@ int	main(void)
 		// update_app_input(&app_state);
 
 		draw_grid(&app_state, &display);
-		draw_tile(&app_state, &display);
+
+		draw_mouse_tile(&app_state, &display);
+		draw_image(&app_state, &display);
 
 		SDL_UpdateWindowSurface(display.window);
 		clear_screen(display.pixels);

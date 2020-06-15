@@ -11,8 +11,10 @@ SRC_NAMES = \
 	grid \
 	main \
 	pixels \
+	pixmap \
 	SDL_initialize \
 	user_interface \
+	utils \
 
 # List of all the source files, folders are to be added by
 # including a $(addprefix, DIR_NAME, $(DIR_FILES))
