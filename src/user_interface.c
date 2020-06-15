@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 22:56:31 by home              #+#    #+#             */
-/*   Updated: 2020/06/15 02:15:29 by home             ###   ########.fr       */
+/*   Updated: 2020/06/15 02:16:35 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,4 @@ void	process_user_input(t_app_state *app_state)
 
 	if (keystate[SDL_SCANCODE_COMMAND] && keystate[SDL_SCANCODE_BACKSPACE])
 		clear_image(app_state->pixmap, app_state->size);
-
-	// if ()
 }
