@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 21:44:13 by home              #+#    #+#             */
-/*   Updated: 2020/06/14 22:20:26 by home             ###   ########.fr       */
+/*   Updated: 2020/06/15 01:50:25 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define MASTER_H
 
 #include <SDL2/SDL.h>
+
+#include "SDL_extended_keyset.h"
 
 #include "window_config.h"
 #include "structs.h"
@@ -28,6 +30,7 @@ void	draw_mouse_tile(t_app_state *app_state, t_display *display);
 void	draw_tile(t_display *display, int x, int y, int color, int size);
 
 void	draw_image(t_app_state *app_state, t_display *display);
+void	clear_image(int *pixmap, int size);
 
 
 void	clear_screen(unsigned char *pixel_array);

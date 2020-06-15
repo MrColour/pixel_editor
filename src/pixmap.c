@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/14 21:45:37 by home              #+#    #+#             */
-/*   Updated: 2020/06/14 22:31:58 by home             ###   ########.fr       */
+/*   Updated: 2020/06/15 01:49:39 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,9 @@ void	draw_image(t_app_state *app_state, t_display *display)
 		}
 		i++;
 	}
+}
+
+void	clear_image(int *pixmap, int size)
+{
+	bzero(pixmap, sizeof(*pixmap) * (size * size));
 }

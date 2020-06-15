@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   SDL_extended_keyset.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/14 22:16:06 by home              #+#    #+#             */
-/*   Updated: 2020/06/14 22:34:53 by home             ###   ########.fr       */
+/*   Created: 2020/06/14 22:40:43 by home              #+#    #+#             */
+/*   Updated: 2020/06/14 22:42:22 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "master.h"
+#ifndef SDL_EXTENDED_KEYSET_H
+# define SDL_EXTENDED_KEYSET_H
 
-int		convert_to_pixmap(int x, int y, int size)
-{
-	int	s_x;
-	int	s_y;
-	int	result;
-	int	tile_size;
+#include <SDL2/SDL.h>
 
-	result = 0;
-	tile_size = WIN_WIDTH / size;
-	s_x = (x / tile_size);
-	s_y = (y / tile_size);
-	result = s_y * size + s_x;
-	return (result);
-}
+#define SDL_SCANCODE_COMMAND (SDL_SCANCODE_LGUI)
+
+#endif
