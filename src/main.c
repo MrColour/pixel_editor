@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 21:30:01 by home              #+#    #+#             */
-/*   Updated: 2020/06/14 22:14:53 by home             ###   ########.fr       */
+/*   Updated: 2020/06/14 22:34:16 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int	main(void)
 		process_user_input(&app_state);
 		// update_app_input(&app_state);
 
-		draw_grid(&app_state, &display);
-
 		draw_mouse_tile(&app_state, &display);
 		draw_image(&app_state, &display);
+
+		draw_grid(&app_state, &display);
 
 		SDL_UpdateWindowSurface(display.window);
 		clear_screen(display.pixels);
