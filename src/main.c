@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 21:30:01 by home              #+#    #+#             */
-/*   Updated: 2020/06/13 22:55:26 by home             ###   ########.fr       */
+/*   Updated: 2020/06/14 19:20:01 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 void	app_state_initialize(t_app_state *app_state)
 {
 	app_state->active = true;
+
+	app_state->size = 8;
+	app_state->grid_color = 0xAAAAAA;
+
+	app_state->pixmap = malloc(sizeof(app_state->pixmap) * (app_state->size * app_state->size));
+	app_state->pixel_color = 0xFFFFFF;
 }
 
 int	main(void)
@@ -29,6 +35,14 @@ int	main(void)
 	{
 		process_user_input(&app_state);
 		// update_app_input(&app_state);
+
+		draw_grid(&app_state, &display);
+		draw_tile(&app_state, &display);
+
+		SDL_UpdateWindowSurface(display.window);
+		clear_screen(display.pixels);
+
+		printf("MOUSE (%d, %d)\n", app_state.mouse_x, app_state.mouse_y);
 	}
 
 	SDLU_close(&display);

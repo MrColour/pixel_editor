@@ -8,6 +8,7 @@ BIN_DIR = bin/
 
 # List of all the source files.
 SRC_NAMES = \
+	grid \
 	main \
 	pixels \
 	SDL_initialize \
